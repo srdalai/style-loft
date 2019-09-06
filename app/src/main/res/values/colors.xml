@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="defaultRed">#DB3022</color>
+    <color name="defaultBG">#F9F9F9</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="material_grey">#616161</color>
+    <color name="primary_text_color">#000000</color>
+    <color name="sub_text_color">#616161</color>
+    <color name="ripple_grey">#A2A2A2</color>
+    <color name="transparent">#00000000</color>
+    <color name="material_green">#00C853</color>
+    <color name="material_red">#f44336</color>
+    <color name="red_ripple">#FF8A81</color>
+</resources>

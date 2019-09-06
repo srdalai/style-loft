@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageViewItem"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/chiku"
+                android:scaleType="centerCrop"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/txtItemName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pullover"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/title_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtItemDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Mango"
+                    android:textSize="@dimen/order_details_text_dimen"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtItemName" />
+
+                <TextView
+                    android:id="@+id/viewColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Color :"
+                    android:textColor="@color/sub_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/txtItemDetails" />
+
+                <TextView
+                    android:id="@+id/txtColor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="Gray"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintBaseline_toBaselineOf="@id/viewColor"
+                    app:layout_constraintStart_toEndOf="@id/viewColor" />
+
+                <TextView
+                    android:id="@+id/viewSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:text="Size :"
+                    android:textColor="@color/sub_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintBaseline_toBaselineOf="@id/viewColor"
+                    app:layout_constraintStart_toEndOf="@id/txtColor" />
+
+                <TextView
+                    android:id="@+id/txtSize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="L"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintBaseline_toBaselineOf="@id/viewColor"
+                    app:layout_constraintStart_toEndOf="@id/viewSize" />
+
+                <TextView
+                    android:id="@+id/viewUnit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Units :"
+                    android:textColor="@color/sub_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewColor" />
+
+                <TextView
+                    android:id="@+id/txtUnits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:text="1"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/order_details_sub_text_dimen"
+                    app:layout_constraintBaseline_toBaselineOf="@id/viewUnit"
+                    app:layout_constraintStart_toEndOf="@id/viewUnit" />
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="51$"
+                    android:textColor="@color/primary_text_color"
+                    android:textSize="@dimen/title_text_size"
+                    app:layout_constraintBaseline_toBaselineOf="@id/viewUnit"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:textStyle="bold"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</FrameLayout>

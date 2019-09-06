@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/checkout_navigation"
+    app:startDestination="@id/checkoutPage">
+
+    <fragment
+        android:id="@+id/checkoutPage"
+        android:name="com.sdtechnocrat.styleloft.checkout.CheckoutPage"
+        android:label="fragment_checkout_page"
+        tools:layout="@layout/fragment_checkout_page" >
+        <action
+            android:id="@+id/action_checkoutPage_to_orderSuccess"
+            app:destination="@id/orderSuccess" />
+        <action
+            android:id="@+id/action_checkoutPage_to_selectAddress"
+            app:destination="@id/selectAddress" />
+        <action
+            android:id="@+id/action_checkoutPage_to_paymentMethods"
+            app:destination="@id/paymentMethods" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectAddress"
+        android:name="com.sdtechnocrat.styleloft.checkout.SelectAddress"
+        android:label="fragment_select_address"
+        tools:layout="@layout/fragment_select_address" >
+        <action
+            android:id="@+id/action_selectAddress_to_addAddress"
+            app:destination="@id/addAddress" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAddress"
+        android:name="com.sdtechnocrat.styleloft.checkout.AddAddress"
+        android:label="fragment_add_address"
+        tools:layout="@layout/fragment_add_address" />
+    <fragment
+        android:id="@+id/paymentMethods"
+        android:name="com.sdtechnocrat.styleloft.checkout.PaymentMethods"
+        android:label="fragment_payment_methods"
+        tools:layout="@layout/fragment_payment_methods" />
+    <fragment
+        android:id="@+id/orderSuccess"
+        android:name="com.sdtechnocrat.styleloft.checkout.OrderSuccess"
+        android:label="fragment_order_success"
+        tools:layout="@layout/fragment_order_success" />
+</navigation>

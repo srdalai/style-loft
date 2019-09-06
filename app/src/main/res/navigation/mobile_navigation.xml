@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.sdtechnocrat.styleloft.ui.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.sdtechnocrat.styleloft.ui.ShopFragment"
+        android:label="Shop"
+        tools:layout="@layout/fragment_shop" />
+    <fragment
+        android:id="@+id/navigation_bag"
+        android:name="com.sdtechnocrat.styleloft.ui.BagFragment"
+        android:label="Bag"
+        tools:layout="@layout/fragment_bag" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.sdtechnocrat.styleloft.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_navigation_profile_to_ordersFragment"
+            app:destination="@id/ordersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_fav"
+        android:name="com.sdtechnocrat.styleloft.ui.FavoritesFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/ordersFragment"
+        android:name="com.sdtechnocrat.styleloft.profile.OrdersFragment"
+        android:label="fragment_orders"
+        tools:layout="@layout/fragment_orders" >
+        <action
+            android:id="@+id/action_ordersFragment_to_orderDetails"
+            app:destination="@id/orderDetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.sdtechnocrat.styleloft.profile.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/orderDetails"
+        android:name="com.sdtechnocrat.styleloft.profile.OrderDetails"
+        android:label="fragment_order_details"
+        tools:layout="@layout/fragment_order_details" />
+</navigation>
