@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
 import com.sdtechnocrat.styleloft.R
+import kotlinx.android.synthetic.main.item_list_payment_cards.view.*
 
 class PaymentMethodsAdapter(val items : ArrayList<String>, val context: Context) : RecyclerView.Adapter<PaymentItemViewHolder>() {
 
@@ -36,6 +37,7 @@ class PaymentMethodsAdapter(val items : ArrayList<String>, val context: Context)
         }
 
         //holder.frameLayout.layoutParams = layoutParams
+        holder.txtCardNum.letterSpacing = 0.4f
 
     }
 
@@ -44,4 +46,5 @@ class PaymentMethodsAdapter(val items : ArrayList<String>, val context: Context)
 class PaymentItemViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     //val frameLayout : FrameLayout = view.frameLayout
     //val linearLayout : LinearLayout = view.linearLayout
+    val txtCardNum : TextView = view.txtCardNum
 }

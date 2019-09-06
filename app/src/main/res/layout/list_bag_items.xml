@@ -21,10 +21,10 @@
 
             <ImageView
                 android:id="@+id/imageViewItem"
-                android:layout_width="140dp"
-                android:layout_height="match_parent"
+                android:layout_width="120dp"
+                android:layout_height="140dp"
                 android:scaleType="centerCrop"
-                app:srcCompat="@drawable/chiku" />
+                app:srcCompat="@drawable/model_1" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
@@ -73,6 +73,7 @@
                     android:layout_marginTop="4dp"
                     android:text="Mango"
                     android:textSize="@dimen/order_details_text_dimen"
+                    android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/txtItemName" />
@@ -81,7 +82,7 @@
                     android:id="@+id/viewColor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="8dp"
                     android:text="Color :"
                     android:textColor="@color/sub_text_color"
                     android:textSize="@dimen/order_details_sub_text_dimen"
@@ -124,8 +125,8 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:layout_marginEnd="12dp"
-                    android:layout_marginBottom="8dp"
                     android:clipToPadding="false"
                     android:paddingBottom="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
