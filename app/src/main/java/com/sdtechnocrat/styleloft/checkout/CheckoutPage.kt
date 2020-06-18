@@ -24,8 +24,15 @@ class CheckoutPage : Fragment() {
         return inflater.inflate(R.layout.fragment_checkout_page, container, false)
     }
 
+    override fun onResume() {
+        super.onResume()
+        requireActivity().title = "Checkout Page"
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+
 
         var dataList = ArrayList<String>()
         val adapter = DeliveryMethodsAdapter(dataList, requireContext())
@@ -33,5 +40,6 @@ class CheckoutPage : Fragment() {
         deliveryRecycler.adapter = adapter
 
         paymentChangeBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_checkoutPage_to_paymentMethods))
+        addressChangeBtn.setOnClickListener(Navigation.createNavigateOnClickListener(R.id.action_checkoutPage_to_selectAddress))
     }
 }

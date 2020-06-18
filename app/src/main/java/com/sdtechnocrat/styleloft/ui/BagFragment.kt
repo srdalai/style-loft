@@ -9,12 +9,18 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.appbar.CollapsingToolbarLayout
+import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.snackbar.Snackbar
 import com.sdtechnocrat.styleloft.CheckoutActivity
 
 import com.sdtechnocrat.styleloft.R
+import kotlinx.android.synthetic.main.component_promocode_layout.*
 import kotlinx.android.synthetic.main.fragment_bag.*
+import kotlinx.android.synthetic.main.fragment_bag.applyFrame
+import kotlinx.android.synthetic.main.fragment_bag.promoEditText
+import kotlinx.android.synthetic.main.fragment_bag.removeFrame
 
 /**
  * A simple [Fragment] subclass.
@@ -60,11 +66,24 @@ class BagFragment : Fragment() {
             requireContext().startActivity(Intent(requireContext(), CheckoutActivity::class.java))
         }
 
+        promoEditText.setOnClickListener{showBottomSheet()}
+
         val dataList : ArrayList<String> = ArrayList()
 
         itemsRecycler.layoutManager = LinearLayoutManager(requireContext())
         itemsRecycler.adapter = BagItemsAdapter(dataList, requireContext())
 
 
+    }
+
+    private fun showBottomSheet() {
+        val dialogView = layoutInflater.inflate(R.layout.component_promocode_layout, null)
+        val dataList : ArrayList<String> = ArrayList()
+        val promoRecycler: RecyclerView = dialogView.findViewById<RecyclerView>(R.id.promoCodesRecycler)
+        promoRecycler.layoutManager = LinearLayoutManager(requireContext())
+        promoRecycler.adapter = PromoCodesAdapter(dataList, requireContext())
+        val dialog = BottomSheetDialog(requireContext(), R.style.SheetDialog)
+        dialog.setContentView(dialogView)
+        dialog.show()
     }
 }
