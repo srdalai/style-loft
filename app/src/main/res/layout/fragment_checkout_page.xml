@@ -64,16 +64,17 @@
                 android:visibility="gone"/>
 
             <com.google.android.material.button.MaterialButton
+                android:id="@+id/addressChangeBtn"
                 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="6dp"
-                android:textColor="@color/material_red"
                 android:backgroundTint="@color/white"
-                app:rippleColor="@color/red_ripple"
-                android:text="Change"/>
+                android:text="Change"
+                android:textColor="@color/material_red"
+                app:rippleColor="@color/red_ripple" />
 
             <TextView
                 android:id="@+id/txtAddressOne"
