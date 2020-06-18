@@ -5,6 +5,7 @@ import android.app.ProgressDialog
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -36,7 +37,7 @@ class Login : Fragment() {
 
         loginBtn.setOnClickListener{
             progressDialog.show()
-            Handler().postDelayed({
+            Handler(Looper.myLooper()!!).postDelayed({
                 progressDialog.dismiss()
                 startActivity(Intent(requireContext(), MainActivity::class.java))
                 requireActivity().finish()

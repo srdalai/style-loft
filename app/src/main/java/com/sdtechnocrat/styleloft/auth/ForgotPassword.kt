@@ -4,6 +4,7 @@ package com.sdtechnocrat.styleloft.auth
 import android.app.ProgressDialog
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +35,7 @@ class ForgotPassword : Fragment() {
 
         sendBtn.setOnClickListener{
             progressDialog.show()
-            Handler().postDelayed({
+            Handler(Looper.myLooper()!!).postDelayed({
                 progressDialog.dismiss()
             }, 5000)
         }

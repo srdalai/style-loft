@@ -29,11 +29,11 @@ class FavoritesAdapter(val items : ArrayList<String>, val context: Context) : Re
     override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         holder.imageViewItem.visibility = VISIBLE
         if (position == 0) {
-            holder.parentFrame.foreground = context.resources.getDrawable(R.color.transparent)
+            holder.parentFrame.foreground = context.resources.getDrawable(R.color.transparent, null)
             holder.addToBasketFrame.visibility = VISIBLE
             holder.txtNotAvailable.visibility = GONE
         } else {
-            holder.parentFrame.foreground = context.resources.getDrawable(R.color.trans_white)
+            holder.parentFrame.foreground = context.resources.getDrawable(R.color.trans_white, null)
             holder.addToBasketFrame.visibility = GONE
             holder.txtNotAvailable.visibility = VISIBLE
         }

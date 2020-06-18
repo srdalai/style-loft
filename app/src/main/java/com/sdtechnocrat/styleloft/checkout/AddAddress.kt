@@ -57,7 +57,7 @@ class AddAddress : Fragment() {
         }
 
         saveAddressBtn.setOnClickListener {
-            var snackMessage = ""
+            var snackMessage: String
             if(hasAddress != null) {
                 snackMessage = "Address Updated Successfully"
             } else {

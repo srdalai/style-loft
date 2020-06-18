@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import android.os.Looper
 import com.sdtechnocrat.styleloft.auth.UserAuthActivity
 
 class SplashScreen : AppCompatActivity() {
@@ -12,7 +13,7 @@ class SplashScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_spalsh_screen)
 
-        Handler().postDelayed({
+        Handler(Looper.myLooper()!!).postDelayed({
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }, 1000)
