@@ -32,7 +32,7 @@ class Login : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val progressDialog = ProgressDialog(requireContext())
-        progressDialog.setMessage("Loging in...")
+        progressDialog.setMessage("Logging in...")
 
         loginBtn.setOnClickListener{
             progressDialog.show()

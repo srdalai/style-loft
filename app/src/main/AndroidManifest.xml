@@ -14,7 +14,7 @@
         <activity android:name=".CheckoutActivity"
             android:theme="@style/AppThemeMaterial.NoActionBar"/>
         <activity
-            android:name=".SpalshScreen"
+            android:name=".SplashScreen"
             android:theme="@style/AppThemeMaterial.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

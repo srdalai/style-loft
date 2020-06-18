@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import com.sdtechnocrat.styleloft.auth.UserAuthActivity
 
-class SpalshScreen : AppCompatActivity() {
+class SplashScreen : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

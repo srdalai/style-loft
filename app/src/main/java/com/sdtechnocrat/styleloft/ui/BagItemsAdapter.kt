@@ -66,7 +66,7 @@ class BagItemsAdapter(val items : ArrayList<String>, val context: Context) : Rec
     }
 }
 
-class  BigItemViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+class BigItemViewHolder (view: View) : RecyclerView.ViewHolder(view) {
     val txtItemName : TextView = view.txtItemName
     val viewMoreFrame : FrameLayout = view.viewMoreFrame
     val removeFrame : FrameLayout = view.removeFrame
